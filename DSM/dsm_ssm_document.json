@@ -41,7 +41,7 @@
 					"",
 					"$directory = Convert-Path .",
 					"$env:PATH += \";$directory\"",
-					"Install-TMDSWindows_DSM.ps1 -DSMURL '{{DSMURL}}' -PolicyID '{{WindowsPolicyID}}'",
+					"dsa_installer.ps1 -DSMURL '{{DSMURL}}' -PolicyID '{{WindowsPolicyID}}'",
 					"if ($?) {",
 					"    exit $LASTEXITCODE",
 					"} else {",
@@ -66,7 +66,7 @@
 					"",
 					"directory=$(pwd)",
 					"export PATH=$PATH:$directory",
-					"TMDSLinux_DSM_install.sh {{DSMURL}} {{LinuxPolicyID}}",
+					"dsa_installer.sh {{DSMURL}} {{LinuxPolicyID}}",
 					""
 				],
 				"timeoutSeconds": "3600"
